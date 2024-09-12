@@ -1,4 +1,14 @@
+
+import {  useNavigate } from "react-router-dom";
+
+
+
 function Header () {
+
+const navigate = useNavigate();
+
+
+
 return(
 
 
@@ -40,23 +50,26 @@ return(
   >
     <ul className="flex w-full flex-col items-center space-y-2 lg:flex-row lg:justify-center lg:space-y-0">
       <li className="lg:mr-12">
-        <a
+        <a  
+        onClick={() => navigate('/')}
           className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
           href="#"
         >
-          Components
+          Home
         </a>
       </li>
       <li className="lg:mr-12">
         <a
+        onClick={() => navigate('/aboutus')}
           className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
           href="#"
         >
-          Pricing
+         About Us
         </a>
       </li>
       <li className="lg:mr-12">
         <a
+        onClick={() => navigate('/contact')}
           className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
           href="#"
         >
@@ -65,30 +78,34 @@ return(
       </li>
       <li className="lg:mr-12">
         <a
+        onClick={() => navigate('/services')}
           className="rounded text-gray-700 transition focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2"
           href="#"
         >
-          FAQ
+          services
         </a>
       </li>
     </ul>
     <hr className="mt-4 w-full lg:hidden" />
     <div className="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
       <a
-        href="#"
+        onClick={() => navigate('/login')}
         title=""
+        href="#"
         className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50"
       >
         {" "}
         Log in{" "}
       </a>
       <a
-        href="#"
+        onClick={() => navigate('/signup')}
         title=""
+        href="#"
         className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600"
       >
-        Get free trial
+        Create Account
       </a>
+      
     </div>
   </nav>
 </header>
