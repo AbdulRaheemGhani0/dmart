@@ -1,10 +1,10 @@
 
+import { BrowserRouter ,Route, Routes} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './App.css';
 import Card from './Components/Card';
-import Header from './Components/Header';
+import Header from './Components/Header.jsx';
 import LoginForm from './Pages/Login';
-import {Route, Routes } from "react-router-dom"
 import ErrorPage from './Pages/Error';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-
+<BrowserRouter>
 <Header />
 
     <Routes>
@@ -43,7 +43,7 @@ function App() {
       </Routes>
 
    
-
+</BrowserRouter>
 
 
       

@@ -1,6 +1,7 @@
 
-import {  useNavigate } from "react-router-dom";
-
+import {  Link, useNavigate } from "react-router-dom";
+import Avatar from "antd/es/avatar/avatar";
+import { UserOutlined } from "@ant-design/icons";
 
 
 function Header () {
@@ -85,11 +86,20 @@ return(
           services
         </a>
       </li>
+      <li><Avatar
+          style={{
+            backgroundColor: '#87d068',
+          }}
+           icon={<UserOutlined />}
+        /></li>
     </ul>
+   
     <hr className="mt-4 w-full lg:hidden" />
+    
     <div className="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
       <a
-        onClick={() => navigate('/login')}
+      
+         onClick={() => navigate('/login')}
         title=""
         href="#"
         className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50"
@@ -97,8 +107,9 @@ return(
         {" "}
         Log in{" "}
       </a>
-      <a
-        onClick={() => navigate('/signup')}
+      <a 
+        
+         onClick={() => navigate('/signup')}
         title=""
         href="#"
         className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600"
@@ -106,10 +117,28 @@ return(
         Create Account
       </a>
       
+
+      
+        
+      
     </div>
   </nav>
 </header>
     
+
+
+
+
+
+
+
+
+
+
+
+
+       
+     
     </>
 )
 

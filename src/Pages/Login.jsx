@@ -1,13 +1,49 @@
 
 import { Button, Checkbox, Form, Input } from 'antd';
+import { useState } from 'react';
+
+
+
+
+
+const [email, setEmail] = useState("")
+const [password, setPassword] = useState("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const onFinish = (values) => {
   console.log('Success:', values);
 };
 const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
 };
+
+
+
+
+
+
+
+
+
+
+
+
 const LoginForm = () => (
-  <><h1>Login Form</h1>
+  <>
   <Form
     name="basic"
     labelCol={{
@@ -27,12 +63,13 @@ const LoginForm = () => (
     autoComplete="off"
   >
     <Form.Item
-      label="Username"
-      name="username"
+    value = {email}
+      label="Email"
+      name="Email"
       rules={[
         {
           required: true,
-          message: 'Please input your username!',
+          message: 'Please input your email!',
         },
       ]}
     >
@@ -40,6 +77,7 @@ const LoginForm = () => (
     </Form.Item>
 
     <Form.Item
+    value = {password}
       label="Password"
       name="password"
       rules={[
